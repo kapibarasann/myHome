@@ -1,0 +1,29 @@
+{
+	"mdns": {"interface": "192.168.70.165"},
+	"bridge": {
+		"name": "myHome",
+		"username": "B8:27:EB:17:AE:20",
+		"port": 51826,
+		"pin": "031-45-154"
+	},
+
+
+	"platforms": [
+		{
+   			"platform": "cmdAccessory",
+   			"name": "CMD Accessory",
+   			"switches": [
+				{
+   					"name": "鍵",
+   					"on_cmd": "sudo python /home/pi/myHome/led_on.py",
+   					"off_cmd": "sudo python /home/pi/myHome/led_off.py",
+   					"polling": true,
+   					"interval": 3,
+   					"manufacturer": "tonnsama",
+   					"type" : "LockMechanism"
+   				}
+			]
+		}
+	]
+
+}
